@@ -17,6 +17,7 @@ def file_upload():
                       aws_access_key_id=os.environ["AWS_ACCESS_KEY_ID"],
                       aws_secret_access_key=os.environ["AWS_SECRET_ACCESS_KEY"]
                       )
+
     s3.put_object(
         ACL="public-read",
         Bucket=os.environ["BUCKET_NAME"],
